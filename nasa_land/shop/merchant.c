@@ -20,14 +20,14 @@ void check_new_list(char *program_name) {
             new_buf[len-1] = '\0';
         }
 
-        if (strcmp(old_buf, "brad") != 0) {
+        if (strcmp(old_buf, "poison") != 0) {
             if (strcmp(old_buf, new_buf) != 0) {
                 printf("You should not replace %s with %s.\n", old_buf, new_buf);
                 return;
             }
         } else {
             if (strcmp("potion", new_buf) != 0) {
-                printf("You should replace %s with %s, not with %s.\n", old_buf, "bread", new_buf);
+                printf("You should replace %s with %s, not with %s.\n", old_buf, "potion", new_buf);
                 return;
             }
         }
