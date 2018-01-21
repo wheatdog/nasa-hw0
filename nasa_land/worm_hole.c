@@ -11,7 +11,6 @@ void set_seed(char *filename) {
     fprintf(fp, "%d", rand());
     fclose(fp);
 }
-
 void cleanup(char *program_name, char *dirname) {
     DIR *dir;
     struct dirent *entry;
@@ -52,7 +51,7 @@ void create_list(char *program_name) {
 int main(int argc, char *argv[]) {
     char *program_name = argv[0];
     srand(time(NULL));
-    char *filenames[] = { "castle/.seed" };
+    char *filenames[] = { "castle/.seed", "shop/.seed" };
 
     printf("You jump into the worm hole, the world has changed a little bit.\n");
     for (int i = 0; i < sizeof(filenames) / sizeof(filenames[0]); ++i) {
