@@ -42,7 +42,7 @@ void check_new_list(char *program_name) {
 int main(int argc, char *argv[]) {
 
     printf("The file \"list\" contains all the goods I have.\n");
-    char *goods[] = { "brad", "sword", "poison", "armor" };
+    char *goods[] = { "arrow", "sword", "poison", "armor" };
     printf("They are %s", goods[0]);
     for (int i = 1; i < sizeof(goods) / sizeof(goods[0]); ++i) {
         printf(", %s", goods[i]);

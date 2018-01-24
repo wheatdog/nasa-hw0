@@ -1,12 +1,8 @@
 #!/bin/sh
 
-LAND=$1
+LAND=$(dirname $0)/nasa_land
 
-if [ "$#" -ne 1 ]; then 
-    echo "Usage: $0 folder_of_a_nasa_land"
-    exit 1 
-fi
-
+{
 echo -n "cave: "
 cat $LAND/cave/chest && echo
 
@@ -18,3 +14,4 @@ sed -e 's/poison/potion/' $LAND/shop/list | $LAND/shop/merchant | tail -n1 | cut
 
 echo -n "castle: "
 yes hit | $LAND/castle/boss | tail -n 1 | cut -d " " -f 4
+} 2> /dev/null
